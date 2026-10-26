@@ -37,3 +37,4 @@ contact@genalpha.dev
 ## Giấy phép
 
 Xem [LICENSE](LICENSE).
+
