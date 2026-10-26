@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triết Lý Quanh Ta — Kênh triết lý và phong thủy ứng dụng</title>
+<meta name="description" content="Trang giới thiệu kênh Triết Lý Quanh Ta: video, bài viết ngắn theo chủ đề triết lý sống và phong thủy ứng dụng.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F1B1D; --bg2:#182628; --card:#1F3236;
+    --text:#EDEFE8; --muted:#9FB3AC;
+    --accent:#7FB69E; --accent-light:#B8D8C8; --border:#2A3B3D;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:"Lexend",sans-serif;font-size:16px;line-height:1.7}
+  h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600;line-height:1.25}
+  h1{font-size:clamp(44px,7vw,64px)}
+  h2{font-size:clamp(30px,4.5vw,36px)}
+  h3{font-size:clamp(20px,3vw,24px)}
+  a{color:var(--accent)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .caption{font-size:13px;color:var(--muted)}
+  .sample-note{font-size:13px;color:var(--muted);font-style:italic}
+  /* Nét mực loang: chỉ dưới tiêu đề chương */
+  .chapter-num{color:var(--accent);font-family:"Playfair Display",serif;font-size:20px;letter-spacing:2px}
+  .ink{width:72px;height:4px;margin-top:12px;border-radius:2px;
+    background:linear-gradient(to right,var(--accent) 0%,var(--accent) 35%,rgba(127,182,158,0) 100%)}
+  section.chapter{padding:96px 0}
+  section.chapter.alt{background:var(--bg2)}
+  .chapter-head p{color:var(--muted);margin-top:12px;max-width:640px}
+  .block-gap{margin-top:32px}
+  /* Hero */
+  .hero{position:relative}
+  .hero img.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,27,29,.88) 0%,rgba(15,27,29,.45) 55%,rgba(15,27,29,.15) 100%);display:flex;align-items:flex-end}
+  .hero-inner{padding:48px 24px 40px;max-width:1080px;margin:0 auto;width:100%}
+  .hero-inner p{color:var(--accent-light);max-width:620px;margin-top:16px}
+  .btn-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
+  .btn{display:inline-block;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:500}
+  .btn-primary{background:var(--accent);color:#0F1B1D}
+  .btn-outline{border:1px solid var(--accent);color:var(--accent-light)}
+  /* Chương I */
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+  .intro-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+  /* Video */
+  .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .video-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  .video-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .video-card-body{padding:20px}
+  .video-card-body h3{margin-bottom:8px}
+  .video-meta{color:var(--muted);font-size:14px}
+  .topic-tag{display:inline-block;background:rgba(184,216,200,.14);color:var(--accent-light);border:1px solid var(--border);border-radius:999px;padding:2px 12px;font-size:13px;margin-bottom:10px}
+  /* Bài viết */
+  .topic-group{margin-top:32px}
+  .topic-group img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px;display:block}
+  .topic-group h3{margin-top:20px}
+  .article{border-top:1px solid var(--border);padding:20px 0}
+  .article h4{font-family:"Playfair Display",serif;font-size:20px;margin-bottom:6px}
+  .article p{color:var(--muted)}
+  /* Liên hệ */
+  .follow-row{display:flex;gap:16px;flex-wrap:wrap}
+  form{margin-top:32px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+  label{display:block;margin-bottom:16px;font-size:15px}
+  input,textarea{width:100%;margin-top:8px;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);font-family:"Lexend",sans-serif;font-size:16px}
+  .form-note{font-size:14px;color:var(--muted);margin-top:8px}
+  footer{border-top:1px solid var(--border);padding:32px 0;color:var(--muted);font-size:14px}
+  @media (max-width:768px){
+    section.chapter{padding:64px 0}
+    .hero img.hero-img{aspect-ratio:4/5}
+    .intro-grid,.video-grid{grid-template-columns:1fr}
+    .hero-inner{padding:32px 24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1800&auto=format&fit=crop" alt="Núi mờ sương buổi sớm">
+  <div class="hero-overlay">
+    <div class="hero-inner">
+      <h1>Triết Lý Quanh Ta</h1>
+      <p>Những câu chuyện triết lý sống và phong thủy ứng dụng — nhẹ nhàng, gần gũi, bắt đầu từ chính những điều quanh ta mỗi ngày.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#video">Xem video mới nhất</a>
+        <a class="btn btn-outline" href="#lien-he">Theo dõi kênh</a>
+      </div>
+    </div>
+  </div>
+</header>
+<p class="wrap sample-note" style="padding-top:12px">Ảnh minh họa mẫu — ảnh hero.</p>
+
+<main>
+<!-- CHƯƠNG I -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">CHƯƠNG I</div>
+      <h2>Giới thiệu kênh</h2>
+      <div class="ink"></div>
+      <p>Triết Lý Quanh Ta kể lại những bài học xưa bằng ngôn ngữ đời thường, để ai cũng có thể nghe, hiểu và áp dụng ngay vào cuộc sống.</p>
+    </div>
+    <div class="intro-grid block-gap">
+      <div>
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop" alt="Con đường rừng tĩnh lặng">
+        <p class="sample-note" style="margin-top:8px">Ảnh minh họa mẫu — ảnh giới thiệu kênh.</p>
+      </div>
+      <div>
+        <p>Kênh nói về triết lý sống, cách ứng xử, và phong thủy ứng dụng trong nhà ở, công việc và các mối quan hệ — không cao siêu, không mê tín, chỉ là những góc nhìn đã được thời gian kiểm chứng.</p>
+        <p style="margin-top:16px">Nội dung dành cho những ai muốn sống chậm lại một chút, sắp xếp lại không gian quanh mình và tìm sự bình an từ những điều giản dị nhất.</p>
+        <p style="margin-top:16px">Mỗi video, mỗi bài viết đều ngắn gọn, kể chuyện bằng ví dụ đời thường — nghe xong là có thể ngẫm, có thể làm theo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHƯƠNG II -->
+<section class="chapter alt" id="video">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">CHƯƠNG II</div>
+      <h2>Video nổi bật</h2>
+      <div class="ink"></div>
+      <p>Tuyển chọn những video được khán giả yêu thích — tất cả đều là video mẫu, dùng để minh họa bố cục trang.</p>
+    </div>
+    <div class="video-grid block-gap">
+      <article class="video-card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop" alt="Núi cao tĩnh lặng" loading="lazy">
+        <div class="video-card-body">
+          <span class="topic-tag">Sống chậm</span>
+          <h3>Buổi sáng chậm lại: bắt đầu ngày mới không vội vã</h3>
+          <p class="video-meta">Thời lượng mẫu: 8 phút • Video mẫu</p>
+        </div>
+      </article>
+      <article class="video-card">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1200&auto=format&fit=crop" alt="Thuyền trên mặt hồ tĩnh" loading="lazy">
+        <div class="video-card-body">
+          <span class="topic-tag">Sống chậm</span>
+          <h3>Mặt nước tĩnh: học cách lắng nghe chính mình</h3>
+          <p class="video-meta">Thời lượng mẫu: 11 phút • Video mẫu</p>
+        </div>
+      </article>
+      <article class="video-card">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Núi dưới bầu trời đêm" loading="lazy">
+        <div class="video-card-body">
+          <span class="topic-tag">Cổ nhân dạy</span>
+          <h3>Đêm dài và những lời cổ nhân dặn về chữ nhẫn</h3>
+          <p class="video-meta">Thời lượng mẫu: 9 phút • Video mẫu</p>
+        </div>
+      </article>
+      <article class="video-card">
+        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=1200&auto=format&fit=crop" alt="Ánh sáng dịu xuyên qua rừng" loading="lazy">
+        <div class="video-card-body">
+          <span class="topic-tag">Phong thủy nhà ở</span>
+          <h3>Ánh sáng trong nhà: cửa sáng thì lòng cũng sáng</h3>
+          <p class="video-meta">Thời lượng mẫu: 7 phút • Video mẫu</p>
+        </div>
+      </article>
+      <article class="video-card">
+        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=1200&auto=format&fit=crop" alt="Dòng nước chảy qua đá" loading="lazy">
+        <div class="video-card-body">
+          <span class="topic-tag">Phong thủy nhà ở</span>
+          <h3>Nước chảy quanh nhà: sắp xếp lối đi sao cho thuận</h3>
+          <p class="video-meta">Thời lượng mẫu: 10 phút • Video mẫu</p>
+        </div>
+      </article>
+      <article class="video-card">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Hồ núi yên bình" loading="lazy">
+        <div class="video-card-body">
+          <span class="topic-tag">Cổ nhân dạy</span>
+          <h3>Lên cao nhìn xa: bài học về tầm nhìn từ người xưa</h3>
+          <p class="video-meta">Thời lượng mẫu: 12 phút • Video mẫu</p>
+        </div>
+      </article>
+    </div>
+    <p class="sample-note block-gap">Ảnh minh họa mẫu — toàn bộ thumbnail video trên đây là ảnh mẫu, tiêu đề và thời lượng là dữ liệu mẫu.</p>
+  </div>
+</section>
+
+<!-- CHƯƠNG III -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">CHƯƠNG III</div>
+      <h2>Bài viết theo chủ đề</h2>
+      <div class="ink"></div>
+      <p>Những bài viết ngắn để đọc chậm — mỗi chủ đề một góc nhìn, mỗi bài một câu chuyện nhỏ quanh ta.</p>
+    </div>
+
+    <div class="topic-group">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Hồ núi trong ánh sớm" loading="lazy">
+      <p class="sample-note" style="margin-top:8px">Ảnh minh họa mẫu — chủ đề Sống chậm.</p>
+      <h3>Sống chậm</h3>
+      <div class="article">
+        <h4>Một tách trà, một buổi chiều không điện thoại</h4>
+        <p>Chỉ cần mười phút ngồi yên mỗi ngày, ta đã nghe rõ hơn tiếng lòng mình — và cả tiếng người thân bên cạnh.</p>
+      </div>
+      <div class="article">
+        <h4>Đi chậm không có nghĩa là đi sau</h4>
+        <p>Người đi chậm mà chắc, nhìn kỹ từng bước chân, thường tới đích với lòng nhẹ nhõm hơn người chạy vội.</p>
+      </div>
+    </div>
+
+    <div class="topic-group">
+      <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1200&auto=format&fit=crop" alt="Ngôi nhà nhỏ bên hồ" loading="lazy">
+      <p class="sample-note" style="margin-top:8px">Ảnh minh họa mẫu — chủ đề Phong thủy nhà ở.</p>
+      <h3>Phong thủy nhà ở</h3>
+      <div class="article">
+        <h4>Cửa chính gọn gàng, vận khí hanh thông</h4>
+        <p>Lối vào nhà là nơi đón năng lượng đầu tiên — giữ nó sạch, sáng và thông thoáng là bước đơn giản mà hiệu quả nhất.</p>
+      </div>
+      <div class="article">
+        <h4>Góc làm việc nên đặt ở đâu trong nhà?</h4>
+        <p>Một góc yên tĩnh, đủ sáng, lưng có điểm tựa — ba điều nhỏ này giúp ta tập trung hơn mỗi ngày làm việc.</p>
+      </div>
+      <div class="article">
+        <h4>Cây xanh trong nhà: đặt sao cho vừa đủ</h4>
+        <p>Cây xanh mang sinh khí, nhưng đặt quá nhiều trong phòng ngủ lại khiến không gian bí bách — vừa đủ mới là hay.</p>
+      </div>
+    </div>
+
+    <div class="topic-group">
+      <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=1200&auto=format&fit=crop" alt="Ngôi đền cổ tĩnh lặng" loading="lazy">
+      <p class="sample-note" style="margin-top:8px">Ảnh minh họa mẫu — chủ đề Cổ nhân dạy.</p>
+      <h3>Cổ nhân dạy</h3>
+      <div class="article">
+        <h4>“Biết đủ là giàu” — lời xưa vẫn còn nguyên giá trị</h4>
+        <p>Người biết đủ không phải là người ngừng cố gắng, mà là người không để lòng tham dắt mình đi mãi không dừng.</p>
+      </div>
+      <div class="article">
+        <h4>Trước khi trách người, hãy soi mình một lần</h4>
+        <p>Cổ nhân dạy rằng mọi mâu thuẫn đều có hai phía — nhìn lại mình trước thường là cách ngắn nhất để hóa giải.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHƯƠNG IV -->
+<section class="chapter alt" id="lien-he">
+  <div class="wrap">
+    <div class="chapter-head">
+      <div class="chapter-num">CHƯƠNG IV</div>
+      <h2>Liên hệ và theo dõi</h2>
+      <div class="ink"></div>
+      <p>Theo dõi kênh để không bỏ lỡ video và bài viết mới. Các đường dẫn dưới đây là đường dẫn mẫu.</p>
+    </div>
+    <div class="follow-row block-gap">
+      <a class="btn btn-primary" href="#" onclick="return false;">Theo dõi trên YouTube (mẫu)</a>
+      <a class="btn btn-outline" href="#" onclick="return false;">Theo dõi trên Facebook (mẫu)</a>
+      <a class="btn btn-outline" href="#" onclick="return false;">Theo dõi trên TikTok (mẫu)</a>
+    </div>
+    <form id="contact-form">
+      <label>Họ tên
+        <input type="text" name="name" placeholder="Tên của bạn" required>
+      </label>
+      <label>Lời nhắn gửi tới kênh
+        <textarea name="message" rows="4" placeholder="Chia sẻ chủ đề bạn muốn kênh làm tiếp..." required></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer">Gửi lời nhắn</button>
+      <p class="form-note">Form chỉ mang tính giao diện demo — chưa gửi thật. Thông tin liên hệ thật của kênh: [CẦN BỔ SUNG].</p>
+      <p class="form-note" id="form-result" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Triết Lý Quanh Ta — trang giới thiệu kênh (bản demo). Mọi video, bài viết, số liệu và đường dẫn trên trang đều là dữ liệu mẫu. Thông tin liên hệ thật của kênh: [CẦN BỔ SUNG].</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var r = document.getElementById('form-result');
+  r.hidden = false;
+  r.textContent = 'Cảm ơn bạn! Đây là bản demo giao diện — lời nhắn chưa được gửi đi thật.';
+});
+</script>
+</body>
+</html>
